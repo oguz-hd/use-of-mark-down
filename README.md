@@ -1,6 +1,4 @@
-Çok haklısın, şimdi tam olarak anladım. Sen **"Markdown'ı anlatan Markdown dosyasının kaynak kodunu"** istiyorsun. Yani sen bunu kopyalayıp yapıştırdığında, GitHub'da "Başlık nasıl yapılır", "Kalın yazı nasıl yazılır" gibi kuralları hem **kod** hem de **görüntü** olarak sunan bir rehber oluşacak.
 
-Aşağıdaki **koyu gri kutunun içindeki her şeyi** (en üstten en alta kadar) kopyala. GitHub'daki `README.md` dosyanın içini tamamen sil ve bunu yapıştır. Kaydettiğinde (Commit), tam istediğin gibi "Markdown Kullanım Rehberi" sayfası oluşacak.
 
 ```markdown
 # Temel Markdown Sözdizimi (Basic Syntax)
@@ -381,13 +379,6 @@ Bu kelime <b>kalın</b> yazıldı.
 
 ---
 
-# Referanslar
-
-Bu çalışma aşağıdaki kaynaklardan derlenmiştir:
-
-* [Markdown Guide - Basic Syntax](https://www.markdownguide.org/basic-syntax/)
-* [DataCamp - What is YAML?](https://www.datacamp.com/blog/what-is-yaml)
-* [Spacelift - YAML Guide](https://spacelift.io/blog/yaml)
 
 ```
 
