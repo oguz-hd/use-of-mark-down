@@ -1,108 +1,138 @@
-# Markdown Rehberi
+# Markdown Kullanım Rehberi
 
-## Genel Bakış
-Neredeyse tüm Markdown uygulamaları, orijinal Markdown tasarım belgesinde belirtilen temel sözdizimini destekler. Markdown işlemcileri arasında küçük farklılıklar ve uyuşmazlıklar olabilir — bunlar mümkün olduğunca satır içinde belirtilmiştir.
+Bu belge, Markdown formatını ve `.md` dosyalarının kullanımını açıklayan kapsamlı bir rehberdir.
 
-## Başlıklar (Headings)
-Bir başlık oluşturmak için, bir kelimenin veya ifadenin önüne sayı işareti (`#`) ekleyin. Kullandığınız sayı işareti sayısı başlık seviyesine karşılık gelmelidir. Örneğin, üçüncü seviye bir başlık (`<h3>`) oluşturmak için üç sayı işareti kullanın (örneğin, `### Benim Başlığım`).
+## Markdown ve .md Nedir?
 
-| Markdown | HTML | Görünüm |
-| :--- | :--- | :--- |
-| `# Başlık seviyesi 1` | `<h1>Başlık seviyesi 1</h1>` | Başlık seviyesi 1 |
-| `## Başlık seviyesi 2` | `<h2>Başlık seviyesi 2</h2>` | Başlık seviyesi 2 |
-| `### Başlık seviyesi 3` | `<h3>Başlık seviyesi 3</h3>` | Başlık seviyesi 3 |
-| `#### Başlık seviyesi 4` | `<h4>Başlık seviyesi 4</h4>` | Başlık seviyesi 4 |
-| `##### Başlık seviyesi 5` | `<h5>Başlık seviyesi 5</h5>` | Başlık seviyesi 5 |
-| `###### Başlık seviyesi 6` | `<h6>Başlık seviyesi 6</h6>` | Başlık seviyesi 6 |
+### Markdown Nedir?
+Markdown, 2004 yılında John Gruber tarafından oluşturulan hafif bir işaretleme dilidir. Temel amacı, insanların kolayca okuyup yazabileceği bir **düz metin formatı** sağlamak ve gerektiğinde bunu yapısal olarak geçerli HTML'e dönüştürebilmektir. Word gibi "Ne Görüyorsan Onu Alırsın" (WYSIWYG) editörlerinin aksine, Markdown biçimlendirme için karmaşık menüler yerine basit semboller (örneğin `#`, `*`, `-`) kullanır.
 
-### Alternatif Sözdizimi
-Alternatif olarak, metnin altındaki satıra başlık seviyesi 1 için istediğiniz sayıda `==` karakteri veya başlık seviyesi 2 için `--` karakteri ekleyebilirsiniz.
+### .md Dosyası Nedir?
+`.md` (veya `.markdown`), Markdown sözdizimi ile yazılmış metin dosyalarının uzantısıdır. "MD" kısaltması "Markdown Documentation" (Markdown Dokümantasyonu) anlamına gelir. Bu dosyalar Notepad, TextEdit veya VS Code gibi herhangi bir metin editörü ile açılabilir ve düzenlenebilir.
 
-| Markdown | HTML | Görünüm |
-| :--- | :--- | :--- |
-| `Başlık seviyesi 1`<br>`===============` | `<h1>Başlık seviyesi 1</h1>` | Başlık seviyesi 1 |
-| `Başlık seviyesi 2`<br>`---------------` | `<h2>Başlık seviyesi 2</h2>` | Başlık seviyesi 2 |
+### Ne İçin Kullanılır?
+*   **Dokümantasyon:** Projelerin `README.md` dosyaları, kurulum rehberleri ve wiki sayfaları.
+*   **Web İçeriği:** Blog gönderileri, statik web siteleri ve forum mesajları.
+*   **Not Alma:** Hızlı ve düzenli not tutma uygulamaları (Örn: Obsidian, Notion).
+*   **Yazılım Geliştirme:** GitHub, GitLab gibi platformlarda proje açıklamaları ve tartışmalar.
 
-### Başlıklar İçin En İyi Uygulamalar
-Markdown uygulamaları, sayı işaretleri (`#`) ile başlık adı arasında eksik bir boşluğun nasıl ele alınacağı konusunda hemfikir değildir. Uyumluluk için, sayı işaretleri ile başlık adı arasına her zaman bir boşluk koyun.
+---
 
-✅ **Bunu yapın:** `# İşte Bir Başlık`
-❌ **Bunu yapmayın:** `#İşte Bir Başlık`
+## Temel Sözdizimi (Basic Syntax)
 
-Uyumluluk için başlıktan önce ve sonra boş satırlar bırakmalısınız.
+Aşağıda, orijinal Markdown tasarım belgesinde belirtilen temel Markdown öğeleri yer almaktadır.
 
-## Paragraflar (Paragraphs)
-Paragraf oluşturmak için, bir veya daha fazla metin satırını ayırmak üzere boş bir satır kullanın.
+### Başlıklar (Headings)
+Bir başlık oluşturmak için, kelime veya ifadenin önüne sayı işareti (`#`) ekleyin. Kullandığınız sayı işareti adedi, başlık seviyesine karşılık gelmelidir. Örneğin, seviye 3 başlık (`<h3>`) için üç adet sayı işareti kullanın.
 
-| Markdown | HTML | Görünüm |
-| :--- | :--- | :--- |
-| `Markdown kullanmayı gerçekten seviyorum.`<br><br>`Sanırım bundan sonra tüm belgelerimi biçimlendirmek için kullanacağım.` | `<p>Markdown kullanmayı gerçekten seviyorum.</p>`<br>`<p>Sanırım bundan sonra tüm belgelerimi biçimlendirmek için kullanacağım.</p>` | Markdown kullanmayı gerçekten seviyorum.<br><br>Sanırım bundan sonra tüm belgelerimi biçimlendirmek için kullanacağım. |
+| Markdown | HTML |
+| :--- | :--- |
+| `# Başlık seviyesi 1` | `<h1>Başlık seviyesi 1</h1>` |
+| `## Başlık seviyesi 2` | `<h2>Başlık seviyesi 2</h2>` |
+| `### Başlık seviyesi 3` | `<h3>Başlık seviyesi 3</h3>` |
+| `#### Başlık seviyesi 4` | `<h4>Başlık seviyesi 4</h4>` |
+| `##### Başlık seviyesi 5` | `<h5>Başlık seviyesi 5</h5>` |
+| `###### Başlık seviyesi 6` | `<h6>Başlık seviyesi 6</h6>` |
 
-### Paragraflar İçin En İyi Uygulamalar
-Paragraf bir liste içinde değilse, paragrafları boşluk veya sekmelerle (tab) girintilemeyin.
-
-✅ **Bunu yapın:** Satırları sola dayalı tutun.
-❌ **Bunu yapmayın:** Paragrafların önüne sekme veya boşluk eklemeyin.
-
-## Satır Sonları (Line Breaks)
-Bir satır sonu veya yeni satır (`<br>`) oluşturmak için, bir satırı iki veya daha fazla boşlukla bitirin ve ardından enter'a basın.
-
-| Markdown | HTML | Görünüm |
-| :--- | :--- | :--- |
-| `Bu ilk satır.  `<br>`Ve bu da ikinci satır.` | `<p>Bu ilk satır.<br>`<br>`Ve bu da ikinci satır.</p>` | Bu ilk satır.<br>Ve bu da ikinci satır. |
-
-### Satır Sonları İçin En İyi Uygulamalar
-Neredeyse her Markdown uygulamasında satır sonları için iki veya daha fazla boşluk kullanabilirsiniz, ancak bu tartışmalıdır. Bir editörde satır sonundaki boşlukları görmek zordur. Uyumluluk için satır sonunda boşluk bırakmayı veya `<br>` HTML etiketini kullanmayı tercih edebilirsiniz.
-
-## Vurgulama (Emphasis)
-Metni kalın veya italik yaparak vurgu ekleyebilirsiniz.
-
-### Kalın (Bold)
-Metni kalın yapmak için, bir kelimenin veya ifadenin önüne ve arkasına iki yıldız (`**`) veya iki alt çizgi (`__`) ekleyin.
-
-| Markdown | HTML | Görünüm |
-| :--- | :--- | :--- |
-| `Sadece **kalın metni** seviyorum.` | `Sadece <strong>kalın metni</strong> seviyorum.` | Sadece **kalın metni** seviyorum. |
-| `Sadece __kalın metni__ seviyorum.` | `Sadece <strong>kalın metni</strong> seviyorum.` | Sadece **kalın metni** seviyorum. |
-
-**En İyi Uygulama:** Kelimenin ortasını kalın yapmak için yıldız işaretlerini kullanın.
-
-### İtalik (Italic)
-Metni italik yapmak için, bir kelimenin veya ifadenin önüne ve arkasına bir yıldız (`*`) veya bir alt çizgi (`_`) ekleyin.
-
-| Markdown | HTML | Görünüm |
-| :--- | :--- | :--- |
-| `İtalik metin *harikadır*.` | `İtalik metin <em>harikadır</em>.` | İtalik metin *harikadır*. |
-| `İtalik metin _harikadır_.` | `İtalik metin <em>harikadır</em>.` | İtalik metin *harikadır*. |
-
-**En İyi Uygulama:** Kelimenin ortasını italik yapmak için yıldız işaretlerini kullanın.
-
-### Kalın ve İtalik
-Metni aynı anda hem kalın hem de italik yapmak için, bir kelimenin veya ifadenin önüne ve arkasına üç yıldız (`***`) veya üç alt çizgi (`___`) ekleyin.
-
-| Markdown | HTML | Görünüm |
-| :--- | :--- | :--- |
-| `Bu metin ***gerçekten önemli***.` | `Bu metin <em><strong>gerçekten önemli</strong></em>.` | Bu metin ***gerçekten önemli***. |
-
-## Alıntılar (Blockquotes)
-Bir alıntı oluşturmak için, bir paragrafın önüne `>` ekleyin.
-
-`> Dorothy, kalesindeki birçok güzel odada onu takip etti.`
-
-### İç İçe Alıntılar
-Alıntılar iç içe olabilir. İç içe geçirmek istediğiniz paragrafın önüne `>>` ekleyin.
+**Alternatif Sözdizimi:**
+Metnin altına `==` ekleyerek Seviye 1 başlık, `--` ekleyerek Seviye 2 başlık oluşturabilirsiniz.
 
 ```markdown
-> Dorothy, kalesindeki birçok güzel odada onu takip etti.
->
->> Cadı ona tencere ve tavaları temizlemesini emretti.
+Başlık Seviyesi 1
+===============
+
+Başlık Seviyesi 2
+---------------
 ```
 
-## Listeler (Lists)
-Öğeleri sıralı ve sırasız listeler halinde düzenleyebilirsiniz.
+> **En İyi Uygulama:** Sayı işaretleri (`#`) ile başlık metni arasında her zaman bir boşluk bırakın (Örn: `# Başlık`). Ayrıca, uyumluluk için başlıktan önce ve sonra birer boş satır bırakmanız önerilir.
 
-### Sıralı Listeler (Ordered Lists)
-Sıralı bir liste oluşturmak için, satır öğelerini sayılar ve ardından noktalarla ekleyin. Sayıların sayısal sırada olması gerekmez, ancak liste bir numarasıyla başlamalıdır.
+---
+
+### Paragraflar (Paragraphs)
+Paragraf oluşturmak için, bir veya daha fazla metin satırını ayırmak üzere boş bir satır kullanın.
+
+**Markdown:**
+```markdown
+Markdown kullanmayı gerçekten seviyorum.
+
+Sanırım bundan sonra tüm belgelerimi biçimlendirmek için onu kullanacağım.
+```
+
+**HTML Karşılığı:** `<p>Markdown kullanmayı gerçekten seviyorum.</p>`
+
+> **Not:** Paragrafları boşluk veya sekmelerle (tab) girintilemeyin.
+
+---
+
+### Satır Sonları (Line Breaks)
+Bir satır sonu veya yeni satır (`<br>`) oluşturmak için, satırı **iki veya daha fazla boşluk** ile bitirin ve ardından Enter'a basın.
+
+**Markdown:**
+```markdown
+Bu ilk satır.  
+Ve bu da ikinci satır.
+```
+
+**Alternatif:** HTML ` <br> ` etiketini de kullanabilirsiniz.
+
+```markdown
+İlk satır.<br>
+İkinci satır.
+```
+
+---
+
+### Vurgulama (Emphasis)
+
+#### Kalın (Bold)
+Metni kalın yapmak için kelime veya ifadenin önüne ve arkasına iki yıldız (`**`) veya iki alt çizgi (`__`) ekleyin.
+
+| Markdown | HTML | Çıktı |
+| :--- | :--- | :--- |
+| `**kalın metin**` | `<strong>kalın metin</strong>` | **kalın metin** |
+| `__kalın metin__` | `<strong>kalın metin</strong>` | __kalın metin__ |
+
+> **En İyi Uygulama:** Kelime ortasında vurgulama yapacaksanız yıldız (`**`) kullanın.
+
+#### İtalik (Italic)
+Metni italik yapmak için kelime veya ifadenin önüne ve arkasına bir yıldız (`*`) veya bir alt çizgi (`_`) ekleyin.
+
+| Markdown | HTML | Çıktı |
+| :--- | :--- | :--- |
+| `*italik metin*` | `<em>italik metin</em>` | *italik metin* |
+| `_italik metin_` | `<em>italik metin</em>` | _italik metin_ |
+
+#### Kalın ve İtalik
+Aynı anda hem kalın hem italik yapmak için üç yıldız (`***`) veya alt çizgi (`___`) kullanın.
+
+`***Bu metin gerçekten çok önemli***` -> ***Bu metin gerçekten çok önemli***
+
+---
+
+### Alıntılar (Blockquotes)
+Bir alıntı oluşturmak için paragrafın önüne `>` ekleyin.
+
+```markdown
+> Dorothy kalesindeki birçok güzel odada onu takip etti.
+```
+
+**Çıktı:**
+> Dorothy kalesindeki birçok güzel odada onu takip etti.
+
+**İç İçe Alıntılar:**
+```markdown
+> Ana alıntı.
+>
+>> İç içe geçmiş alıntı.
+```
+
+---
+
+### Listeler (Lists)
+
+#### Sıralı Listeler (Ordered Lists)
+Sayılar ve ardından nokta ekleyerek sıralı liste oluşturabilirsiniz. Sayıların sırayla gitmesi zorunlu değildir, ancak 1 ile başlaması önerilir.
 
 ```markdown
 1. İlk öğe
@@ -110,8 +140,13 @@ Sıralı bir liste oluşturmak için, satır öğelerini sayılar ve ardından n
 3. Üçüncü öğe
 ```
 
-### Sırasız Listeler (Unordered Lists)
-Sırasız bir liste oluşturmak için, satır öğelerinin önüne tire (`-`), yıldız (`*`) veya artı (`+`) işaretleri ekleyin.
+**Çıktı:**
+1. İlk öğe
+2. İkinci öğe
+3. Üçüncü öğe
+
+#### Sırasız Listeler (Unordered Lists)
+Tire (`-`), yıldız (`*`) veya artı (`+`) işaretlerini kullanarak sırasız liste oluşturabilirsiniz.
 
 ```markdown
 - İlk öğe
@@ -119,68 +154,105 @@ Sırasız bir liste oluşturmak için, satır öğelerinin önüne tire (`-`), y
 - Üçüncü öğe
 ```
 
-## Kod (Code)
-Bir kelimeyi veya ifadeyi kod olarak belirtmek için, onu ters tırnaklar (backticks - `` ` ``) içine alın.
+**Çıktı:**
+- İlk öğe
+- İkinci öğe
+- Üçüncü öğe
 
-`Komut isteminde `nano` yazın.`
+#### Liste İçinde Öğe Ekleme
+Listenin devamlılığını bozmadan paragraf veya başka öğeler eklemek için, öğeyi **dört boşluk** veya **bir tab** kadar girintileyin.
 
-### Kod Blokları (Code Blocks)
-Kod blokları oluşturmak için, bloğun her satırını en az dört boşluk veya bir sekme (tab) ile girintileyin. Veya "çitle çevrili" (fenced) kod blokları için üç ters tırnak (```) kullanın.
+```markdown
+* Birinci liste maddesi.
+* İkinci liste maddesi.
+
+    İkinci maddenin altına bir paragraf eklemek istiyorum.
+
+* Üçüncü liste maddesi.
+```
+
+---
+
+### Kod (Code)
+
+#### Satır İçi Kod
+Bir kelimeyi kod olarak belirtmek için ters tırnak (backticks `` ` ``) içine alın.
+
+`Komut satırına ``nano`` yazın.` -> Komut satırına `nano` yazın.
+
+#### Kod Blokları
+Kod blokları oluşturmak için her satırı en az dört boşluk veya bir tab ile girintileyin. Alternatif ve yaygın yöntem olarak "fenced code blocks" (çitli kod blokları) kullanabilirsiniz (üç ters tırnak ```).
 
     <html>
       <head>
       </head>
     </html>
 
-## Yatay Çizgiler (Horizontal Rules)
-Bir yatay çizgi oluşturmak için, bir satırda tek başlarına üç veya daha fazla yıldız (`***`), tire (`---`) veya alt çizgi (`___`) kullanın.
+---
+
+### Yatay Çizgiler (Horizontal Rules)
+Bir yatay çizgi oluşturmak için, tek bir satırda üç veya daha fazla yıldız (`***`), tire (`---`) veya alt çizgi (`___`) kullanın.
 
 ```markdown
 ***
 ---
-_________________
+___
 ```
 
-## Bağlantılar (Links)
-Bir bağlantı oluşturmak için, bağlantı metnini köşeli parantez içine alın (örneğin, `[Duck Duck Go]`) ve hemen ardından URL'yi parantez içine alın (örneğin, `(https://duckduckgo.com)`).
+**Çıktı:**
 
-`En sevdiğim arama motoru [Duck Duck Go](https://duckduckgo.com).`
+---
 
-### URL'ler ve E-posta Adresleri
-Bir URL'yi veya e-posta adresini hızlıca bağlantıya dönüştürmek için, onu açılı parantez içine alın.
+### Bağlantılar (Links)
+Bağlantı metnini köşeli parantez `[ ]` içine, URL'yi ise hemen ardından parantez `( )` içine alın.
 
-`<https://www.markdownguide.org>`
-`<fake@example.com>`
+```markdown
+Favori arama motorum [Duck Duck Go](https://duckduckgo.com).
+```
 
-## Görseller (Images)
-Bir görsel eklemek için, bir ünlem işareti (`!`), ardından köşeli parantez içinde alt metin (alt text) ve parantez içinde görselin yolu veya URL'sini ekleyin.
+**Çıktı:**
+Favori arama motorum [Duck Duck Go](https://duckduckgo.com).
 
-`![San Juan Dağları çok güzel](/assets/images/san-juan-mountains.jpg "San Juan Dağları")`
+**Başlık Ekleme:**
+URL'den sonra tırnak işareti içinde başlık ekleyebilirsiniz (imleç üzerine gelince görünür).
+`[Duck Duck Go](https://duckduckgo.com "En iyi arama motoru")`
 
-### Görsellere Bağlantı Verme
-Bir görsele bağlantı eklemek için, görselin Markdown kodunu köşeli parantez içine alın ve ardından bağlantıyı parantez içinde ekleyin.
+**Otomatik URL:**
+URL'yi açılı parantez içine alarak tıklanabilir yapabilirsiniz: `<https://www.markdownguide.org>`
 
-`[![Çöldeki eski bir kaya](/assets/images/shiprock.jpg)](https://www.flickr.com)`
+---
 
-## Karakter Kaçışları (Escaping Characters)
-Markdown belgesinde metni biçimlendirmek için kullanılan bir karakteri, olduğu gibi (literal) görüntülemek için, karakterin önüne bir ters eğik çizgi (`\`) ekleyin.
+### Görseller (Images)
+Resim eklemek için bağlantı formatına benzer bir yapı kullanılır, ancak en başa ünlem işareti (`!`) eklenir.
 
-`\* Ters eğik çizgi olmadan, bu sırasız bir listede madde işareti olurdu.`
+`![Alt Metin](resim-yolu-veya-url.jpg "Opsiyonel Başlık")`
 
-Aşağıdaki karakterleri kaçış (escape) karakteriyle kullanabilirsiniz:
-`\`   ters eğik çizgi
-`*`   yıldız
-`_`   alt çizgi
-`{}`  süslü parantezler
-`[]`  köşeli parantezler
-`()`  parantezler
-`#`   diyez (kare) işareti
-`+`   artı işareti
-`-`   eksi işareti (tire)
-`.`   nokta
-`!`   ünlem işareti
+**Örnek:**
+```markdown
+![Linux Maskotu](/assets/images/tux.png)
+```
 
-## HTML
-Birçok Markdown uygulaması, Markdown biçimli metin içinde HTML etiketleri kullanmanıza izin verir. Bu, Markdown sözdizimi yerine belirli HTML etiketlerini tercih ediyorsanız yararlıdır.
+**Resme Bağlantı Verme:**
+Resim kodunu köşeli parantez içine alıp, ardından bağlantı URL'sini parantez içinde ekleyin.
+`[![Resim Açıklaması](resim.jpg)](http://baglanti-adresi.com)`
 
-`Bu **kelime** kalın. Bu <em>kelime</em> italik.`
+---
+
+### Karakter Kaçışları (Escaping Characters)
+Markdown formatlamasında kullanılan özel karakterleri (örneğin `*` veya `#`) normal metin olarak göstermek isterseniz, önüne ters eğik çizgi (`\`) koyun.
+
+`\* Bu bir madde işareti değildir.` -> * Bu bir madde işareti değildir.
+
+Kaçış yapılabilen karakterler: `\`, `` ` ``, `*`, `_`, `{}`, `[]`, `()`, `#`, `+`, `-`, `.`, `!`, `|`
+
+---
+
+### HTML Kullanımı
+Markdown içerisinde HTML etiketleri de kullanabilirsiniz.
+
+```markdown
+Bu **kalın** kelime. Bu <em>italik</em> kelime.
+```
+
+---
+
