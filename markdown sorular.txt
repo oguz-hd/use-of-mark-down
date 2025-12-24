@@ -1,0 +1,87 @@
+
+1. Markdown’da başlık oluşturmak için hangi karakter kullanılır?
+   A) `*`
+   B) `-`
+   C) `#`
+   D) `/`
+   E) `>`
+
+2. `## Başlık` ifadesi neyi temsil eder?
+   A) Kalın metni
+   B) Kod bloğunu
+   C) 3. seviye başlığı
+   D) 2. seviye başlığı
+   E) Alıntı bloğunu
+
+3. Kalın (bold) metin yazmak için doğru kullanım hangisidir?
+   A) `_metin_`
+   B) `~~metin~~`
+   C) `` `metin` ``
+   D) `**metin**`
+   E) `//metin//`
+
+4. Eğik (italic) metin yazmak için hangisi kullanılabilir?
+   A) `**metin**`
+   B) `_metin_`
+   C) `~~metin~~`
+   D) `` `metin` ``
+   E) `## metin`
+
+5. Sırasız (madde işaretli) liste oluşturmak için hangisi doğrudur?
+   A) `# Madde`
+   B) `1. Madde`
+   C) `* Madde`
+   D) `> Madde`
+   E) `` ` Madde ` ``
+
+6. Aşağıdakilerden hangisi numaralı liste oluşturur?
+   A) `- Madde`
+   B) `* Madde`
+   C) `# Madde`
+   D) `1. Madde`
+   E) `> Madde`
+
+7. Markdown’da bağlantı (link) eklemek için doğru sözdizimi hangisidir?
+   A) `(Metin)[link]`
+   B) `<Metin>(link)`
+   C) `{Metin}<link>`
+   D) `[Metin](link)`
+   E) `Metin(link)`
+
+8. Resim eklerken bağlantı sözdizimine ek olarak hangi karakter kullanılır?
+   A) `#`
+   B) `*`
+   C) `!`
+   D) `>`
+   E) `_`
+
+9. Kod bloğu oluşturmak için hangi karakter üç kez kullanılır?
+   A) `###`
+   B) `***`
+   C) `---`
+   D) ` ``` `
+   E) `~~~`
+
+10. Markdown’da yatay çizgi (horizontal rule) oluşturmak için hangisi kullanılabilir?
+    A) `--`
+    B) `==`
+    C) `///`
+    D) `___`
+    E) `---`
+
+---
+
+**Cevap Anahtarı**
+
+1. C
+2. D
+3. D
+4. B
+5. C
+6. D
+7. D
+8. C
+9. D
+10. E
+
+---
